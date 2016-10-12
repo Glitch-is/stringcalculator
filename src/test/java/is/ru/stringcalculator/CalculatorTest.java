@@ -71,5 +71,11 @@ public class CalculatorTest {
         assertEquals(3, Calculator.add("//;\n1;2"));
     }
 
+    @Test
+    public void testMultipleDelmiters()
+    {
+        assertEquals(15, Calculator.add("//;\n5\n4;3\n2,1"));
+    }
+
 }
 
