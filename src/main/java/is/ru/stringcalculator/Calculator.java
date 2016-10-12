@@ -8,8 +8,13 @@ public class Calculator {
 
         if(numbers.contains(","))
         {
+            int ret = 0;
             String[] n = numbers.split(",");
-            return Integer.parseInt(n[0]) + Integer.parseInt(n[1]);
+
+            for(String numb : n)
+                ret += Integer.parseInt(numb);
+
+            return ret;
         }
 
         return Integer.parseInt(numbers);
