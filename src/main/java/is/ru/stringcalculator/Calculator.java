@@ -13,8 +13,14 @@ public class Calculator {
             int ret = 0;
             String[] n = numbers.split(",");
 
-            for(String numb : n)
-                ret += Integer.parseInt(numb);
+            for(String snum : n)
+            {
+                int num = Integer.parseInt(snum);
+                if(num < 0)
+                    throw new IllegalArgumentException("Negatives not allowed: " + num);
+
+                ret += num;
+            }
 
             return ret;
         }
