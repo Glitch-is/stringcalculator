@@ -12,16 +12,17 @@ public class Calculator {
 
         numbers = numbers.replace("\n", ",");
 
-        if(numbers.contains(","))
+        if(numbers.contains("//"))
         {
-            int[] n = parseNumbers(numbers);
-
-            negativeCheck(n);
-
-            return sum(n);
+            numbers = numbers.replace(numbers.substring(2,3), ",");
+            numbers = numbers.substring(4);
         }
 
-        return Integer.parseInt(numbers);
+        int[] n = parseNumbers(numbers);
+
+        negativeCheck(n);
+
+        return sum(n);
     }
 
     private static int[] parseNumbers(String numbers)
