@@ -6,6 +6,8 @@ public class Calculator {
         if(numbers.isEmpty())
             return 0;
 
+        numbers = numbers.replace("\n", ",");
+
         if(numbers.contains(","))
         {
             int ret = 0;
