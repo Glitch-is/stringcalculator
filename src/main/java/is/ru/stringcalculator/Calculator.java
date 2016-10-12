@@ -38,7 +38,10 @@ public class Calculator {
     {
         int ret = 0;
         for(int num : n)
-            ret += num;
+        {
+            if(num <= 1000)
+                ret += num;
+        }
         return ret;
     }
 
